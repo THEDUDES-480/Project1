@@ -1,0 +1,35 @@
+- hosts: localhost
+  tasks:
+      - name: update and upgrade apt packages
+        become: true
+        apt:
+          upgrade: yes
+          update_cache: yes
+          cache_valid_time: 86400
+
+      - name: install nano
+        apt: name=nano update_cache=yes state=latest cache_valid_time=86400
+
+      - name: Install apache2
+        apt: name=apache2 update_cache=yes state=latest cache_valid_time=86400
+
+
+      - name: Start service Apache2
+        service:
+          name: apache2
+          state: started
+
+      - name: Install mySQL client
+        apt: name=mysql-client update_cache=yes state=latest cache_valid_time=86400
+
+      - name: Install PHP
+        apt:  name=php state=present
+        with_items:
+             -libapache2-mod-php
+             -php-mysql
+             -php7.1-cli
+             -php7.1-curl
+             -php7.1-gd
+          
+      - name: install git
+        apt: name=git update_cache=yes state=latest cache_valid_time=86400
