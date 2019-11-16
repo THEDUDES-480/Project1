@@ -1,0 +1,18 @@
+In order to start this AWS  setup you have to create an account here : https://portal.aws.amazon.com/billing/signup#/start
+First you are going to need to install terrafrom which can be found here : https://www.terraform.io/downloads.html
+
+Second you are going to need to intasll AWS CLI which can be found here: https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html
+
+Atter both of these CLI have been installed on your local machine , you are going to create a Root IAM user to use for the AWS CLI configuration file. This file will be set to the deafult profile.
+The comammnd would be :
+
+$ aws configure
+
+Then the it will ask for the follwing :
+
+AWS Access Key ID [None]: accesskey 
+AWS Secret Access Key [None]: secretkey 
+Default region name [None]: us-XXXX_XX
+Default output format [None]:
+
+All the information can filled above from the inforamtion given to you when the IAM user was created.
