@@ -1,4 +1,10 @@
-In order to start this AWS  setup you have to create an account here : https://portal.aws.amazon.com/billing/signup#/start
+1.) Go to the AWS website setup you have to create an account here : https://portal.aws.amazon.com/billing/signup#/start
+2.) Create an account with the email.
+3.) Then give a name and password for the account. 
+4.) Then provide a creditor debit card information. 
+5.) Then select the free or basic teir plan.
+6.) Then go to account setting and add user to access the the user with the permission that are created.
+
 First you are going to need to install terrafrom which can be found here : https://www.terraform.io/downloads.html
 
 Second you are going to need to intasll AWS CLI which can be found here: https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html
