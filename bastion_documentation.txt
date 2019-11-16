@@ -1,0 +1,26 @@
+Documentation for creating Bastion host 
+
+1. Cd into ~/.ssh 
+2.nano config       (Edit config or create file if it doesn't exist) 
+3. Set up file as shown:
+
+Host JumpBox
+Hostname (Ip of jumpbox)
+User ec2-user
+IdentityFile (location of pem file) 
+ProxyCommand    (here is where you add a proxy command) 
+
+
+Host myInstance 
+Hostname (private ip of instance) 
+User ec2-user 
+IdentityFile (location of pem file) 
+ProxyCommand    ssh JumpBox -W %h:%p 
+
+
+4.Save and exit it 
+5. Now enter the command     ssh JumpBox  (to go into the Jumpbox) 
+6. OR enter command    ssh myInstance    (to go directly into jumpbox and then 
+automatically transfer to the private ec2 instance.)
+
+ 
