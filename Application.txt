@@ -1,0 +1,6 @@
+Type Test Application:
+ What this applciation dpoes will test the tpye speed and correctness of the the user  through the web browser.
+ 
+1.) The application that is deployed is through the anisble play book named: gitsite.yml
+2.) Make sure upadte the sofwtare your OS  firs then to install ansible with the following code: sudo apt install ansible
+3.) The code will run on its and install all the packges that you need.
